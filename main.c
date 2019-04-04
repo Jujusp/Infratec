@@ -186,18 +186,22 @@ unsigned char salvarNBits(int n)
 unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
     // DESARROLLO OPCIONAL: Puede ser útil para el desarrollo de los procedimientos obligatorios.
 	char a = secuencia[bitpos/8];
-	if(bitpos%8>5)
+	if(bitpos%8>8-n)
 	{
 	    //La idea para continuar acá es tomar los bits faltantes de la siguiente parte del arreglo
 	    //Hablamos antes sobre limpiar el siguiente del arreglo dejando los bits que necesitamos y con un or al otro y sirve
 		char b = secuencia[(bitpos+8)/8];
-		// esto esta mall
-		
-		return !(bitpos%8)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
+
+		b= b>>8-((bitpos%8)+n)%8;
+
+		a= (a<<bitpos%8)>>8-n;
+
+
+		return a | b;
 
 	}
-
-	return !(bitpos%8)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
+//Primera respuesta del ternario funciona para 0<n<6
+	return (bitpos%8==0)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
 
 }
 
