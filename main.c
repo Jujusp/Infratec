@@ -120,11 +120,21 @@ int main(int argc, char* argv[]) {
 */
 void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
     // TODO: Desarrollar OBLIGATORIAMENTE en su totalidad.
-	int bits = lenstr(mensaje)*(sizeof mensaje[1])*8;
-	short bitsSacados =0;
+
+
+    //Tomamos el mensaje a encriptar y le sacamos el length
+    //Multiplicamos el length por (tamaño en bytes un elemento del mensaje*8) <-- seria en bits practicamente.
+    int bits = strlen(mensaje)*(sizeof mensaje[1])*8;
+
+    //Este short es el que nos indicara en cuantos bits 'partidos' o sacados vamos de los bits del mensaje a encriptar.
+    short bitsSacados =0;
+
+    //Bueno tengo la sensacion que aquí hay ciclo infinito
 	while(bits>0)
 	{
 		int i =0;
+
+
 		char byteAMeter = (salvarNBits(n) & img->informacion[i]) | sacarNbits(mensaje[],bitsSacados,n);
 		bitSacados+=n;
 	}
@@ -143,12 +153,17 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
 }
 unsigned char salvarNBits(int n)
 {
+
 	unsigned char mask =0;
 	for(int i=0; i<n;i++)
 	{
-		mask++:
+	    //Le sumamos a la máscara 1
+		mask++;
+		//Hacemos corrimiento de 1 bit a izquierda
 		mask <<1;
 	}
+
+	//No existe k como tal pero me imagino que es completarByte
 	int completarByte = 8-n-1;
 	if(k>0)
 		mask<<k;
@@ -169,12 +184,15 @@ unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
 	char a = secuencia[bitpos/8];
 	if(bitpos%8>5)
 	{
+	    //La idea para continuar acá es tomar los bits faltantes de la siguiente parte del arreglo
+	    //Hablamos antes sobre limpiar el siguiente del arreglo dejando los bits que necesitamos y con un or al otro y sirve
 		char b = secuencia[(bitpos+8)/8];
 		// esto esta mall
 		
 		return !(bitpos%8)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
 
 	}
+
 	return !(bitpos%8)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
 
 }
