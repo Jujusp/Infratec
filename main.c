@@ -35,6 +35,8 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n);
 //Función que saca n bits de una secuencia de caracteres a partir de una posición dada
 unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n);
 
+unsigned char salvarNBits(int n);
+
 // Programa principal
 // NO MODIFICAR
 int main(int argc, char* argv[]) {
@@ -118,6 +120,15 @@ int main(int argc, char* argv[]) {
 */
 void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
     // TODO: Desarrollar OBLIGATORIAMENTE en su totalidad.
+	int bits = lenstr(mensaje)*(sizeof mensaje[1])*8;
+	short bitsSacados =0;
+	while(bits>0)
+	{
+		int i =0;
+		char byteAMeter = (salvarNBits(n) & img->informacion[i]) | sacarNbits(mensaje[],bitsSacados,n);
+		bitSacados+=n;
+	}
+	
 }
 
 /**
@@ -130,7 +141,21 @@ void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
 void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
     // TODO: Desarrollar OBLIGATORIAMENTE en su totalidad.
 }
-
+unsigned char salvarNBits(int n)
+{
+	unsigned char mask =0;
+	for(int i=0; i<n;i++)
+	{
+		mask++:
+		mask <<1;
+	}
+	int completarByte = 8-n-1;
+	if(k>0)
+		mask<<k;
+	else
+		mask++;
+	return mask;
+}
 /**
 * Extrae n bits a partir del bit que se encuentra en la posición bitpos en la secuencia de bytes que
 * se pasan como parámetro
@@ -141,6 +166,17 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
 */
 unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
     // DESARROLLO OPCIONAL: Puede ser útil para el desarrollo de los procedimientos obligatorios.
+	char a = secuencia[bitpos/8];
+	if(bitpos%8>5)
+	{
+		char b = secuencia[(bitpos+8)/8];
+		// esto esta mall
+		
+		return !(bitpos%8)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
+
+	}
+	return !(bitpos%8)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
+
 }
 
 // Lee un archivo en formato BMP y lo almacena en la estructura img
