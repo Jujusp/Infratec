@@ -134,7 +134,11 @@ void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
 	{
 		int i =0;
 
-
+	//El la primera parte lo que hacemos es crear la máscara y la aplicamos sobre la información de la img para poder dejar los bits
+	//más significativos protegidos y los bits a asignar en ceros para poder insertarlos
+	//Luego, para la parte antes de la disyunción creamos el byte que contiene los pedazos de n bits del mensaje.
+	//Finalmente generamos la disyunción entre el byte de la imagen y el byte que contiene n bits de la imagen, al generar
+	//La disyunción nos genera el byte con la información insertada.
 		char byteAMeter = (salvarNBits(n) & img->informacion[i]) | sacarNbits(mensaje[],bitsSacados,n);
 		bitSacados+=n;
 	}
