@@ -235,7 +235,8 @@ unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
         }
         printf("\n");
 
-        a= (a<<(bitpos%8))>>((8-n)+2);
+        a= a<<(bitpos%8);
+        a= a>>(8-n);
 
         //a = (a & (salvarNBits(8-(bitpos%8)) >>8-(bitpos%8)));
 

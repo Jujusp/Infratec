@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/ev.jaimes/Infratec/Infratec/main.c" "C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.obj"
+  "C:/Users/ev.jaimes/Infra/Infratec/main.c" "C:/Users/ev.jaimes/Infra/Infratec/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

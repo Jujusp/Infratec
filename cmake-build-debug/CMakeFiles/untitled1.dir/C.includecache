@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/ev.jaimes/Infratec/Infratec/main.c
+C:/Users/ev.jaimes/Infra/Infratec/main.c
 stdlib.h
 -
 stdio.h
