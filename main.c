@@ -36,6 +36,8 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n);
 unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n);
 
 unsigned char salvarNBits(int n);
+unsigned char matarNBits(int n);
+
 
 // Programa principal
 // NO MODIFICAR
@@ -130,17 +132,20 @@ void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
     short bitsSacados =0;
 
     //Bueno tengo la sensacion que aquí hay ciclo infinito
+    int i =0;
 	while(bits>0)
 	{
-		int i =0;
-
 	//El la primera parte lo que hacemos es crear la máscara y la aplicamos sobre la información de la img para poder dejar los bits
 	//más significativos protegidos y los bits a asignar en ceros para poder insertarlos
 	//Luego, para la parte antes de la disyunción creamos el byte que contiene los pedazos de n bits del mensaje.
 	//Finalmente generamos la disyunción entre el byte de la imagen y el byte que contiene n bits de la imagen, al generar
 	//La disyunción nos genera el byte con la información insertada.
-		char byteAMeter = (salvarNBits(n) & img->informacion[i]) | sacarNbits(mensaje[],bitsSacados,n);
-		bitSacados+=n;
+
+	    char byteAMeter = (salvarNBits(n) & img->informacion[i]) | sacarNbits(mensaje,bitsSacados,n);
+	    img->informacion[i++] = byteAMeter;
+		bits-=n;
+		bitsSacados+=n;
+
 	}
 	
 }
@@ -164,16 +169,30 @@ unsigned char salvarNBits(int n)
 	    //Le sumamos a la máscara 1
 		mask++;
 		//Hacemos corrimiento de 1 bit a izquierda
-		mask <<1;
+		mask <<=1;
 	}
 
 	//No existe k como tal pero me imagino que es completarByte
 	int completarByte = 8-n-1;
-	if(k>0)
-		mask<<k;
+	if(completarByte>0)
+		mask<<=completarByte;
 	else
 		mask++;
 	return mask;
+}
+unsigned char matarNBits(int n)
+{
+
+    unsigned char mask =0;
+    for(int i=0; i<n;i++)
+    {
+        //Le sumamos a la máscara 1
+        mask++;
+        //Hacemos corrimiento de 1 bit a izquierda
+        mask <<=1;
+    }
+    mask++;
+    return mask;
 }
 /**
 * Extrae n bits a partir del bit que se encuentra en la posición bitpos en la secuencia de bytes que
@@ -186,16 +205,54 @@ unsigned char salvarNBits(int n)
 unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
     // DESARROLLO OPCIONAL: Puede ser útil para el desarrollo de los procedimientos obligatorios.
 	char a = secuencia[bitpos/8];
-	if(bitpos%8>8-n)
-	{
-	    //La idea para continuar acá es tomar los bits faltantes de la siguiente parte del arreglo
-	    //Hablamos antes sobre limpiar el siguiente del arreglo dejando los bits que necesitamos y con un or al otro y sirve
-		char b = secuencia[(bitpos+8)/8];
 
-		b= b>>8-((bitpos%8)+n)%8;
+	if(bitpos%8>8-n) {
+        //La idea para continuar acá es tomar los bits faltantes de la siguiente parte del arreglo
+        //Hablamos antes sobre limpiar el siguiente del arreglo dejando los bits que necesitamos y con un or al otro y sirve
+        char b = secuencia[(bitpos + 8) / 8];
+        printf("B sin modificar  \n");
+        int i;
+        for (i = 0; i < 8; i++) {
+            printf("%d", !!((b << i) & 0x80));
+        }
+        printf("\n");
 
-		a= (a<<bitpos%8)>>8-n;
 
+        b = b >> 8 - ((bitpos % 8) + n) % 8;
+        i=0;
+        printf("B modificado  \n");
+        for (i = 0; i < 8; i++) {
+            printf("%d", !!((b << i) & 0x80));
+        }
+        printf("\n");
+
+
+        printf("A sin modificar  \n");
+        i=0;
+        for (i = 0; i < 8; i++) {
+            printf("%d", !!((a << i) & 0x80));
+        }
+        printf("\n");
+
+        //a= (a<<(bitpos%8))>>(8-n);
+
+        //a = (a & (salvarNBits(8-(bitpos%8)) >>8-(bitpos%8)));
+
+
+        printf("A modificado \n");
+        i=0;
+        for (i = 0; i < 8; i++) {
+            printf("%d", !!((a << i) & 0x80));
+        }
+        printf("\n");
+
+
+        char c=a|b;
+        printf("disyuncion \n");
+        for (i = 0; i < 8; i++) {
+            printf("%d", !!((c << i) & 0x80));
+        }
+        printf("\n");
 
 		return a | b;
 
