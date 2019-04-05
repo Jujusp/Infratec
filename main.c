@@ -141,7 +141,7 @@ void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
 	//Finalmente generamos la disyunción entre el byte de la imagen y el byte que contiene n bits de la imagen, al generar
 	//La disyunción nos genera el byte con la información insertada.
 
-	    char byteAMeter = (salvarNBits(n) & img->informacion[i]) | sacarNbits(mensaje,bitsSacados,n);
+	    char byteAMeter = (salvarNBits(8-n) & img->informacion[i]) | sacarNbits(mensaje,bitsSacados,n);
 	    img->informacion[i++] = byteAMeter;
 		bits-=n;
 		bitsSacados+=n;
@@ -162,24 +162,25 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
 }
 unsigned char salvarNBits(int n)
 {
-
+    int i;
 	unsigned char mask =0;
-	for(int i=0; i<n;i++)
-	{
-	    //Le sumamos a la máscara 1
-		mask++;
-		//Hacemos corrimiento de 1 bit a izquierda
-		mask <<=1;
-	}
+        for (int i = 0; i < n; i++) {
+            //Le sumamos a la máscara 1
+            mask++;
+            //Hacemos corrimiento de 1 bit a izquierda
+            mask <<= 1;
+        }
 
-	//No existe k como tal pero me imagino que es completarByte
-	int completarByte = 8-n-1;
-	if(completarByte>0)
-		mask<<=completarByte;
-	else
-		mask++;
-	return mask;
+        //No existe k como tal pero me imagino que es completarByte
+        int completarByte = 8 - n - 1;
+        if (completarByte > 0)
+            mask <<= completarByte;
+        else
+            mask++;
+        return mask;
 }
+
+
 unsigned char matarNBits(int n)
 {
 
@@ -234,7 +235,7 @@ unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
         }
         printf("\n");
 
-        //a= (a<<(bitpos%8))>>(8-n);
+        a= (a<<(bitpos%8))>>((8-n)+2);
 
         //a = (a & (salvarNBits(8-(bitpos%8)) >>8-(bitpos%8)));
 
