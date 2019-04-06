@@ -44,10 +44,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E re
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec"
+CMAKE_SOURCE_DIR = C:\Users\Usuario\Infratec\Infratec
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\Usuario\Infratec\Infratec\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles\untitled1.dir\depend.make
@@ -60,21 +60,21 @@ include CMakeFiles\untitled1.dir\flags.make
 
 CMakeFiles\untitled1.dir\main.c.obj: CMakeFiles\untitled1.dir\flags.make
 CMakeFiles\untitled1.dir\main.c.obj: ..\main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/untitled1.dir/main.c.obj"
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\untitled1.dir\main.c.obj /FdCMakeFiles\untitled1.dir\ /FS -c "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Infratec\Infratec\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/untitled1.dir/main.c.obj"
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\untitled1.dir\main.c.obj /FdCMakeFiles\untitled1.dir\ /FS -c C:\Users\Usuario\Infratec\Infratec\main.c
 <<
 
 CMakeFiles\untitled1.dir\main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled1.dir/main.c.i"
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\untitled1.dir\main.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\main.c"
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\untitled1.dir\main.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Usuario\Infratec\Infratec\main.c
 <<
 
 CMakeFiles\untitled1.dir\main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled1.dir/main.c.s"
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\untitled1.dir\main.c.s /c "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\main.c"
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\untitled1.dir\main.c.s /c C:\Users\Usuario\Infratec\Infratec\main.c
 <<
 
 # Object files for target untitled1
@@ -87,9 +87,9 @@ untitled1_EXTERNAL_OBJECTS =
 untitled1.exe: CMakeFiles\untitled1.dir\main.c.obj
 untitled1.exe: CMakeFiles\untitled1.dir\build.make
 untitled1.exe: CMakeFiles\untitled1.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable untitled1.exe"
-	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\untitled1.dir --manifests  -- C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\untitled1.dir\objects1.rsp @<<
- /out:untitled1.exe /implib:untitled1.lib /pdb:"C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\cmake-build-debug\untitled1.pdb" /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Usuario\Infratec\Infratec\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable untitled1.exe"
+	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\untitled1.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\untitled1.dir\objects1.rsp @<<
+ /out:untitled1.exe /implib:untitled1.lib /pdb:C:\Users\Usuario\Infratec\Infratec\cmake-build-debug\untitled1.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -102,6 +102,6 @@ CMakeFiles\untitled1.dir\clean:
 .PHONY : CMakeFiles\untitled1.dir\clean
 
 CMakeFiles\untitled1.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec" "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec" "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\cmake-build-debug" "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\cmake-build-debug" "C:\Users\piper\Desktop\UniversidaddelosAndes\3#semestre\Infratec\Infratec\cmake-build-debug\CMakeFiles\untitled1.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\Usuario\Infratec\Infratec C:\Users\Usuario\Infratec\Infratec C:\Users\Usuario\Infratec\Infratec\cmake-build-debug C:\Users\Usuario\Infratec\Infratec\cmake-build-debug C:\Users\Usuario\Infratec\Infratec\cmake-build-debug\CMakeFiles\untitled1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles\untitled1.dir\depend
 

@@ -21,44 +21,44 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
 
-The C compiler identification is MSVC, found in "C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"nmake" "/nologo" "cmTC_ec688\fast"
-	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_ec688.dir\build.make /nologo -L                  CMakeFiles\cmTC_ec688.dir\build
-Building C object CMakeFiles/cmTC_ec688.dir/testCCompiler.c.obj
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\piper\AppData\Local\Temp\nm3390.tmp
+Run Build Command:"nmake" "/nologo" "cmTC_facdb\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_facdb.dir\build.make /nologo -L                  CMakeFiles\cmTC_facdb.dir\build
+Building C object CMakeFiles/cmTC_facdb.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\Usuario\AppData\Local\Temp\nm685F.tmp
 testCCompiler.c
-Linking C executable cmTC_ec688.exe
-	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_ec688.dir --manifests  -- C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_ec688.dir\objects1.rsp @C:\Users\piper\AppData\Local\Temp\nm374A.tmp
+Linking C executable cmTC_facdb.exe
+	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_facdb.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_facdb.dir\objects1.rsp @C:\Users\Usuario\AppData\Local\Temp\nm71E5.tmp
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"nmake" "/nologo" "cmTC_63796\fast"
-	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_63796.dir\build.make /nologo -L                  CMakeFiles\cmTC_63796.dir\build
-Building C object CMakeFiles/cmTC_63796.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\piper\AppData\Local\Temp\nm3FF4.tmp
+Run Build Command:"nmake" "/nologo" "cmTC_f51ad\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_f51ad.dir\build.make /nologo -L                  CMakeFiles\cmTC_f51ad.dir\build
+Building C object CMakeFiles/cmTC_f51ad.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\Usuario\AppData\Local\Temp\nm7E96.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_63796.exe
-	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_63796.dir --manifests  -- C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_63796.dir\objects1.rsp @C:\Users\piper\AppData\Local\Temp\nm4091.tmp
+Linking C executable cmTC_f51ad.exe
+	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_f51ad.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_f51ad.dir\objects1.rsp @C:\Users\Usuario\AppData\Local\Temp\nm7F43.tmp
 
 
 
 
 Detecting C [] compiler features compiled with the following output:
-Change Dir: C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"nmake" "/nologo" "cmTC_fa1fa\fast"
-	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_fa1fa.dir\build.make /nologo -L                  CMakeFiles\cmTC_fa1fa.dir\build
-Building C object CMakeFiles/cmTC_fa1fa.dir/feature_tests.c.obj
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\piper\AppData\Local\Temp\nm469B.tmp
+Run Build Command:"nmake" "/nologo" "cmTC_1c8f6\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_1c8f6.dir\build.make /nologo -L                  CMakeFiles\cmTC_1c8f6.dir\build
+Building C object CMakeFiles/cmTC_1c8f6.dir/feature_tests.c.obj
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\Usuario\AppData\Local\Temp\nm8879.tmp
 feature_tests.c
-Linking C executable cmTC_fa1fa.exe
-	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_fa1fa.dir --manifests  -- C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_fa1fa.dir\objects1.rsp @C:\Users\piper\AppData\Local\Temp\nm4871.tmp
+Linking C executable cmTC_1c8f6.exe
+	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_1c8f6.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_1c8f6.dir\objects1.rsp @C:\Users\Usuario\AppData\Local\Temp\nm8917.tmp
 
 
     Feature record: C_FEATURE:1c_function_prototypes

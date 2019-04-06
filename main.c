@@ -162,18 +162,28 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
     //AUN SIENDO PENSADO
 
     int i =0;
+    int j=0;
     int pos =0;
-    while(!l)
+    while(l)
     {
-        while(pos<8) {
-            char ByteAInsertar = img->informacion[i++] & matarNBits(n);
-            ByteAInsertar <<= n;
+    int h=8;
+        char ByteAInsertar=0;
+
+        //Funciona para el 1 y pares menos 6.
+        while(h>0) {
+
+            char good = img->informacion[i++] & matarNBits(n);
+            ByteAInsertar<<=n;
+            ByteAInsertar= (ByteAInsertar | good);
+            h-=n;
             pos+=n;
         }
-        if(pos-8 != 0)
+        if(h==0)
         {
-
+           msg[j]=ByteAInsertar;
         }
+
+        j++;
         l--;
     }
 }
