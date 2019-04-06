@@ -159,6 +159,23 @@ void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
 */
 void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
     // TODO: Desarrollar OBLIGATORIAMENTE en su totalidad.
+    //AUN SIENDO PENSADO
+
+    int i =0;
+    int pos =0;
+    while(!l)
+    {
+        while(pos<8) {
+            char ByteAInsertar = img->informacion[i++] & matarNBits(n);
+            ByteAInsertar <<= n;
+            pos+=n;
+        }
+        if(pos-8 != 0)
+        {
+
+        }
+        l--;
+    }
 }
 unsigned char salvarNBits(int n)
 {
@@ -185,7 +202,7 @@ unsigned char matarNBits(int n)
 {
 
     unsigned char mask =0;
-    for(int i=0; i<n;i++)
+    for(int i=1; i<n;i++)
     {
         //Le sumamos a la máscara 1
         mask++;
@@ -211,56 +228,20 @@ unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
         //La idea para continuar acá es tomar los bits faltantes de la siguiente parte del arreglo
         //Hablamos antes sobre limpiar el siguiente del arreglo dejando los bits que necesitamos y con un or al otro y sirve
         char b = secuencia[(bitpos + 8) / 8];
-        printf("B sin modificar  \n");
-        int i;
-        for (i = 0; i < 8; i++) {
-            printf("%d", !!((b << i) & 0x80));
-        }
-        printf("\n");
-
 
         b = b >> 8 - ((bitpos % 8) + n) % 8;
-        i=0;
-        printf("B modificado  \n");
-        for (i = 0; i < 8; i++) {
-            printf("%d", !!((b << i) & 0x80));
-        }
-        printf("\n");
 
-
-        printf("A sin modificar  \n");
-        i=0;
-        for (i = 0; i < 8; i++) {
-            printf("%d", !!((a << i) & 0x80));
-        }
-        printf("\n");
-
-        a= a<<(bitpos%8);
-        a= a>>(8-n);
+        a= a & matarNBits(9-bitpos%8);
+        a= a<<(n-(9-bitpos%8));
 
         //a = (a & (salvarNBits(8-(bitpos%8)) >>8-(bitpos%8)));
-
-
-        printf("A modificado \n");
-        i=0;
-        for (i = 0; i < 8; i++) {
-            printf("%d", !!((a << i) & 0x80));
-        }
-        printf("\n");
-
-
-        char c=a|b;
-        printf("disyuncion \n");
-        for (i = 0; i < 8; i++) {
-            printf("%d", !!((c << i) & 0x80));
-        }
-        printf("\n");
 
 		return a | b;
 
 	}
+
 //Primera respuesta del ternario funciona para 0<n<6
-	return (bitpos%8==0)? a>>8-n:(a<<(bitpos%8)-1)>>8-n;
+	return (bitpos%8==0)? a& matarNBits(n):(a>>7-bitpos%8) & matarNBits(n);
 
 }
 

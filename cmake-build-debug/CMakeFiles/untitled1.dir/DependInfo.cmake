@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/ev.jaimes/Infra/Infratec/main.c" "C:/Users/ev.jaimes/Infra/Infratec/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.obj"
+  "C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec/main.c" "C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.obj"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "MSVC")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

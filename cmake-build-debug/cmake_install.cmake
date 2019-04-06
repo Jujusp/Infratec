@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/ev.jaimes/Infra/Infratec
+# Install script for directory: C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/ev.jaimes/Infra/Infratec/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/piper/Desktop/UniversidaddelosAndes/3#semestre/Infratec/Infratec/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
