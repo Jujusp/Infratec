@@ -144,6 +144,7 @@ void insertarMensaje(Imagen * img, unsigned char mensaje[], int n) {
 	    char byteAMeter = (salvarNBits(8-n) & img->informacion[i]) | sacarNbits(mensaje,bitsSacados,n);
 	    img->informacion[i++] = byteAMeter;
 		bits-=n;
+
 		bitsSacados+=n;
 
 	}
@@ -168,6 +169,8 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
 
     char notemueras="";
 
+    int nosFaltan =0;
+
     int chiquitoquefalta=0;
     while(l)
     {
@@ -191,47 +194,43 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
             }
         }
 
-        else
-        {
-            while(h>0) {
-
-                if(chiquitoquefalta!=0)
-                {
-                    char goodsito = notemueras & matarNBits(8-chiquitoquefalta);
-                    ByteAInsertar <<= n;
-                    ByteAInsertar = (ByteAInsertar | goodsito);
+        else {
+            while (h > 0) {
+                if (nosFaltan != 0) {
+                    char b = img->informacion[i++] & matarNBits(nosFaltan);
+                    ByteAInsertar = ByteAInsertar | b;
+                    h -= nosFaltan;
+                    nosFaltan = 0;
                 }
 
-                char good = img->informacion[i++] & matarNBits(n);
-                ByteAInsertar <<= n;
-                ByteAInsertar = (ByteAInsertar | good);
-                h -= n;
-                pos += n;
+                if (h - n > 0) {
+                    char b = img->informacion[i++] & matarNBits(n);
+                    ByteAInsertar <<= n;
+                    ByteAInsertar = (ByteAInsertar | b);
+                    h -= n;
+                } else {
+                    char b = img->informacion[i] & matarNBits(n);
+                    b >>= n - h;
+                    ByteAInsertar = (ByteAInsertar | b);
+                    h -= n;
+                    nosFaltan = h * -1;
+                }
 
-                if ((pos + n) >= 8)
-                    break;
-            }
+                if (h < 0) {
+                    msg[j] = ByteAInsertar;
 
-            //Aqui me hace un corrimiento que no quiero esto es en el caso de que le falten bits y tengamos que coger de otro pero no es válido para algunos casos.
-            ByteAInsertar<<=h;
+                }
 
-            notemueras=img->informacion[i];
-            char restante= notemueras & matarNBits(n);
-            restante>>= (n-h);
-            ByteAInsertar= (ByteAInsertar | restante);
-            chiquitoquefalta=pos+1;
-
-            h=0;
-
-
-            if (h == 0)
-            {
-                msg[j] = ByteAInsertar;
             }
         }
-
         j++;
         l--;
+
+        for (i = 0; i < 8; i++) {
+            printf("%d", !!((ByteAInsertar << i) & 0x80));
+        }
+
+        printf("\n");
     }
 }
 unsigned char salvarNBits(int n)
@@ -298,7 +297,7 @@ unsigned char sacarNbits(unsigned char secuencia[], int bitpos, int n) {
 	}
 
 //Primera respuesta del ternario funciona para 0<n<6
-	return (bitpos%8==0)? a& matarNBits(n):(a>>7-bitpos%8) & matarNBits(n);
+	return (bitpos%8==0)? (a& salvarNBits(n))>>8-n:(a>>(8-(bitpos%8)-n)) & matarNBits(n);
 
 }
 
