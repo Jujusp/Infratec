@@ -161,26 +161,73 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
     // TODO: Desarrollar OBLIGATORIAMENTE en su totalidad.
     //AUN SIENDO PENSADO
 
+    //Permite el avance sobre el areglo que contiene la info de la imagen
     int i =0;
+    //Permite el acceso a el arreglo en donde se guarda el mensaje
     int j=0;
-    int pos =0;
+
+    char notemueras="";
+
+    int chiquitoquefalta=0;
     while(l)
     {
     int h=8;
+        int pos =0;
         char ByteAInsertar=0;
 
+        if(n==1 || n==2 || n==4 || n==8 )
         //Funciona para el 1 y pares menos 6.
-        while(h>0) {
-
-            char good = img->informacion[i++] & matarNBits(n);
-            ByteAInsertar<<=n;
-            ByteAInsertar= (ByteAInsertar | good);
-            h-=n;
-            pos+=n;
-        }
-        if(h==0)
         {
-           msg[j]=ByteAInsertar;
+            while (h > 0) {
+
+                char good = img->informacion[i++] & matarNBits(n);
+                ByteAInsertar <<= n;
+                ByteAInsertar = (ByteAInsertar | good);
+                h -= n;
+                //pos += n;
+            }
+            if (h == 0) {
+                msg[j] = ByteAInsertar;
+            }
+        }
+
+        else
+        {
+            while(h>0) {
+
+                if(chiquitoquefalta!=0)
+                {
+                    char goodsito = notemueras & matarNBits(8-chiquitoquefalta);
+                    ByteAInsertar <<= n;
+                    ByteAInsertar = (ByteAInsertar | goodsito);
+                }
+
+                char good = img->informacion[i++] & matarNBits(n);
+                ByteAInsertar <<= n;
+                ByteAInsertar = (ByteAInsertar | good);
+                h -= n;
+                pos += n;
+
+                if ((pos + n) >= 8)
+                    break;
+            }
+
+            //Aqui me hace un corrimiento que no quiero esto es en el caso de que le falten bits y tengamos que coger de otro pero no es válido para algunos casos.
+            ByteAInsertar<<=h;
+
+            notemueras=img->informacion[i];
+            char restante= notemueras & matarNBits(n);
+            restante>>= (n-h);
+            ByteAInsertar= (ByteAInsertar | restante);
+            chiquitoquefalta=pos+1;
+
+            h=0;
+
+
+            if (h == 0)
+            {
+                msg[j] = ByteAInsertar;
+            }
         }
 
         j++;
