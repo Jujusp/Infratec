@@ -2,9 +2,9 @@
 // EL GRUPO DEBE SER DESARROLLADO EN GRUPOS DE A 3 PERSONAS MAXIMO
 //
 // DESARROLLADO POR:
-// Nombre - Código
-// Nombre - Código
-// Nombre - Código
+// Juan Felipe Rubio - 201718384
+// Daniel Gómez Perdomo - Código
+// Elina Jaimes - 201816315
 
 #define _CRT_SECURE_NO_DEPRECATE
 #include <stdlib.h>
@@ -166,11 +166,13 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
     int i =0;
     //Permite el acceso a el arreglo en donde se guarda el mensaje
     int j=0;
-
+	//Indica el numero de bits que sobraron del otro byte, los cuales deben ser tomados en cuenta para construir otro byte del mensaje
     int nosFaltan =0;
 
+	//Comienza a iterar sobre la imagen basado en el numero de bytes que tenga el mensaje	
     while(l)
     {
+	//Centinela que nos permite saber cuántos bits hemos leido o tomado hasta ahora	    
     int h=8;
         char ByteAInsertar=0;
 
@@ -178,46 +180,64 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
         //Funciona para el 1 y pares menos 6.
         {
             while (h > 0) {
-
+		//Toma un byte de la imagen y le aplica la mascara para tomar los bits menos significativos del byte por el n de insertados
                 char good = img->informacion[i++] & matarNBits(n);
+		//realizamos corrimiento para permitir la entrada de los otros bytes    
                 ByteAInsertar <<= n;
+		//disyuncion entre el byte y los datos (good) encontrados    
                 ByteAInsertar = (ByteAInsertar | good);
+		//Resta el numero de bits ya revisados    
                 h -= n;
                 //pos += n;
             }
+		
             if (h == 0) {
-                msg[j] = ByteAInsertar;
+               	//Inserta el byte encontrado en el arreglo de bytes del mensaje
+		    msg[j] = ByteAInsertar;
             }
         }
-
+	//CASOS IMPARES Y 6
         else {
             while (h > 0) {
                 if (nosFaltan != 0) {
-                    char b = img->informacion[i++] & matarNBits(nosFaltan);
+                    	//En caso de que tengamos bits sobrantes de una extracción lo ponemos al inicio de el siguiente byte
+			char b = img->informacion[i++] & matarNBits(nosFaltan);
 
                     ByteAInsertar = ByteAInsertar | b;
+			//Restamos el numero de bits que ya agregamos	
                     h -= nosFaltan;
                     nosFaltan = 0;
 
                 }
-
+		
+		//Revisa los bits extraidos y va extrayendo de los siguientes, si no cumple la condición es porque debemos tomar un numero distinto de bits para completar un byte     
                 if (h - n >= 0) {
-                    char b = img->informacion[i++] & matarNBits(n);
+                    	//Toma el byte y aplica mascara
+			char b = img->informacion[i++] & matarNBits(n);
 
-
+		//Hace corrimiento de n sobre el byte para poder meter la info
                     ByteAInsertar <<= n;
+		//disyuncion	
                     ByteAInsertar = (ByteAInsertar | b);
-                    h -= n;
+                  //resta los bits conseguidos  
+			h -= n;
                 } else {
-                    ByteAInsertar<<=h;
+			//Aqui entra en el caso de que tengamos un numero de bits diferentes a n para completar un byte del mensaje
+                    	//Hacemos corrimiento sobre el byte el numero de bits que nos faltan para completarlo
+			ByteAInsertar<<=h;
+			//Aplicamos sobre el siguiente y sacamos los bits con mask
                     char b = img->informacion[i] & matarNBits(n);
+			//Realizamos corrimiento sobre el byte anterior de forma que nos quede el numero de bits que requerimos para completar el byte del mensaje
                     b >>= n - h;
+			//disyuncion, unimos y logramos juntar los bits que tenemos con los juntados	
                     ByteAInsertar = (ByteAInsertar | b);
-                    h -= n;
+                    //restamos los que ya leíamos
+			h -= n;
+			//guardamos el numero de bits que sobraron y no usamos para meterlo de primeras en otro byte	
                     nosFaltan = h * -1;
 
                 }
-
+		//insertamos el byte en el arreglo de bytes del mensaje
                 if (h <= 0) {
                     msg[j] = ByteAInsertar;
 
@@ -225,10 +245,18 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
 
             }
         }
+	//aumentamos pos en el arreglo de bytes del mensaje    
         j++;
+	//disminuimos el numero de bytes para recorrer    
         l--;
     }
 }
+
+/**
+ * Guarda los bits más significativos de un byte.
+ * @param n numero de bytes significativos a guardar. Genera mascara, permite vaciar los bits menos significativos.
+ * @return mascara que guarda los bits mas significativos
+ */
 unsigned char salvarNBits(int n)
 {
     int i;
@@ -249,7 +277,11 @@ unsigned char salvarNBits(int n)
         return mask;
 }
 
-
+/**
+ * Guarda los bits menos significativos de un byte.
+ * @param n numero de bits menos asingificativos a guardar
+ * @return mascara con los bits menos significativos.
+ */
 unsigned char matarNBits(int n)
 {
 
