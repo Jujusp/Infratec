@@ -3,7 +3,7 @@
 //
 // DESARROLLADO POR:
 // Juan Felipe Rubio - 201718384
-// Daniel Gómez Perdomo - Código
+// Daniel Gómez Perdomo - 201713194
 // Elina Jaimes - 201816315
 
 #define _CRT_SECURE_NO_DEPRECATE
