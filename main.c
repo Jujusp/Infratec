@@ -167,15 +167,11 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
     //Permite el acceso a el arreglo en donde se guarda el mensaje
     int j=0;
 
-    char notemueras="";
-
     int nosFaltan =0;
 
-    int chiquitoquefalta=0;
     while(l)
     {
     int h=8;
-        int pos =0;
         char ByteAInsertar=0;
 
         if(n==1 || n==2 || n==4 || n==8 )
@@ -198,25 +194,31 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
             while (h > 0) {
                 if (nosFaltan != 0) {
                     char b = img->informacion[i++] & matarNBits(nosFaltan);
+
                     ByteAInsertar = ByteAInsertar | b;
                     h -= nosFaltan;
                     nosFaltan = 0;
+
                 }
 
-                if (h - n > 0) {
+                if (h - n >= 0) {
                     char b = img->informacion[i++] & matarNBits(n);
+
+
                     ByteAInsertar <<= n;
                     ByteAInsertar = (ByteAInsertar | b);
                     h -= n;
                 } else {
+                    ByteAInsertar<<=h;
                     char b = img->informacion[i] & matarNBits(n);
                     b >>= n - h;
                     ByteAInsertar = (ByteAInsertar | b);
                     h -= n;
                     nosFaltan = h * -1;
+
                 }
 
-                if (h < 0) {
+                if (h <= 0) {
                     msg[j] = ByteAInsertar;
 
                 }
@@ -225,12 +227,6 @@ void leerMensaje(Imagen * img, unsigned char msg[], int l, int n) {
         }
         j++;
         l--;
-
-        for (i = 0; i < 8; i++) {
-            printf("%d", !!((ByteAInsertar << i) & 0x80));
-        }
-
-        printf("\n");
     }
 }
 unsigned char salvarNBits(int n)

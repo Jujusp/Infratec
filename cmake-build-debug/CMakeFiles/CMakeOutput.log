@@ -1,167 +1,65 @@
 The system is: Windows - 10.0.17134 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: C:/Program Files (x86)/Falcon/MinGW/bin/gcc.exe 
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.16.27023/bin/Hostx86/x86/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
+Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 19.16.27027.1 para x86
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.16.27027.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
 
 
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
 
-The C compiler identification is GNU, found in "C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/a.exe"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe" "cmTC_4a059/fast"
-C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_4a059.dir\build.make CMakeFiles/cmTC_4a059.dir/build
-mingw32-make.exe[1]: Entering directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4a059.dir/testCCompiler.c.obj
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_4a059.dir\testCCompiler.c.obj   -c C:\Users\ev.jaimes\Infratec\Infratec\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c
-Linking C executable cmTC_4a059.exe
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_4a059.dir\link.txt --verbose=1
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_4a059.dir/objects.a
-C:\PROGRA~2\Falcon\MinGW\bin\ar.exe cr CMakeFiles\cmTC_4a059.dir/objects.a @CMakeFiles\cmTC_4a059.dir\objects1.rsp
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_4a059.dir/objects.a -Wl,--no-whole-archive  -o cmTC_4a059.exe -Wl,--out-implib,libcmTC_4a059.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_4a059.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"nmake" "/nologo" "cmTC_91154\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_91154.dir\build.make /nologo -L                  CMakeFiles\cmTC_91154.dir\build
+Building C object CMakeFiles/cmTC_91154.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\Usuario\AppData\Local\Temp\nm62AB.tmp
+testCCompiler.c
+Linking C executable cmTC_91154.exe
+	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_91154.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_91154.dir\objects1.rsp @C:\Users\Usuario\AppData\Local\Temp\nm66A3.tmp
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe" "cmTC_14f97/fast"
-C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_14f97.dir\build.make CMakeFiles/cmTC_14f97.dir/build
-mingw32-make.exe[1]: Entering directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_14f97.dir/CMakeCCompilerABI.c.obj
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_14f97.dir\CMakeCCompilerABI.c.obj   -c "C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\share\cmake-3.13\Modules\CMakeCCompilerABI.c"
-Linking C executable cmTC_14f97.exe
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_14f97.dir\link.txt --verbose=1
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_14f97.dir/objects.a
-C:\PROGRA~2\Falcon\MinGW\bin\ar.exe cr CMakeFiles\cmTC_14f97.dir/objects.a @CMakeFiles\cmTC_14f97.dir\objects1.rsp
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_14f97.dir/objects.a -Wl,--no-whole-archive  -o cmTC_14f97.exe -Wl,--out-implib,libcmTC_14f97.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
-Using built-in specs.
-Target: mingw32
-Configured with: ../../gcc-4.4.1/configure --prefix=/mingw --build=mingw32 --enable-languages=c,ada,c++,fortran,objc,obj-c++ --disable-nls --disable-win32-registry --enable-libgomp --enable-cxx-flags='-fno-function-sections -fno-data-sections' --disable-werror --enable-threads --disable-symvers --enable-version-specific-runtime-libs --enable-fully-dynamic-string --with-pkgversion='TDM-2 mingw32' --enable-sjlj-exceptions --with-bugurl=http://www.tdragon.net/recentgcc/bugs.php
-Thread model: win32
-gcc version 4.4.1 (TDM-2 mingw32) 
-COMPILER_PATH=
-LIBRARY_PATH=c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/;c:/progra~2/falcon/mingw/bin/../lib/gcc/;c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_14f97.exe' '-mtune=i386'
- ld -Bdynamic -o cmTC_14f97.exe c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1 -Lc:/progra~2/falcon/mingw/bin/../lib/gcc -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../.. --whole-archive CMakeFiles\cmTC_14f97.dir/objects.a --no-whole-archive --out-implib libcmTC_14f97.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o
-mingw32-make.exe[1]: Leaving directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-
-Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp]
-  ignore line: []
-  ignore line: [Run Build Command:"C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe" "cmTC_14f97/fast"]
-  ignore line: [C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_14f97.dir\build.make CMakeFiles/cmTC_14f97.dir/build]
-  ignore line: [mingw32-make.exe[1]: Entering directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_14f97.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_14f97.dir\CMakeCCompilerABI.c.obj   -c "C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\share\cmake-3.13\Modules\CMakeCCompilerABI.c"]
-  ignore line: [Linking C executable cmTC_14f97.exe]
-  ignore line: ["C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_14f97.dir\link.txt --verbose=1]
-  ignore line: ["C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_14f97.dir/objects.a]
-  ignore line: [C:\PROGRA~2\Falcon\MinGW\bin\ar.exe cr CMakeFiles\cmTC_14f97.dir/objects.a @CMakeFiles\cmTC_14f97.dir\objects1.rsp]
-  ignore line: [C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_14f97.dir/objects.a -Wl,--no-whole-archive  -o cmTC_14f97.exe -Wl,--out-implib,libcmTC_14f97.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
-  ignore line: [Using built-in specs.]
-  ignore line: [Target: mingw32]
-  ignore line: [Configured with: ../../gcc-4.4.1/configure --prefix=/mingw --build=mingw32 --enable-languages=c,ada,c++,fortran,objc,obj-c++ --disable-nls --disable-win32-registry --enable-libgomp --enable-cxx-flags='-fno-function-sections -fno-data-sections' --disable-werror --enable-threads --disable-symvers --enable-version-specific-runtime-libs --enable-fully-dynamic-string --with-pkgversion='TDM-2 mingw32' --enable-sjlj-exceptions --with-bugurl=http://www.tdragon.net/recentgcc/bugs.php]
-  ignore line: [Thread model: win32]
-  ignore line: [gcc version 4.4.1 (TDM-2 mingw32) ]
-  ignore line: [COMPILER_PATH=]
-  ignore line: [LIBRARY_PATH=c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/]
-  ignore line: [c:/progra~2/falcon/mingw/bin/../lib/gcc/]
-  ignore line: [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_14f97.exe' '-mtune=i386']
-  link line: [ ld -Bdynamic -o cmTC_14f97.exe c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1 -Lc:/progra~2/falcon/mingw/bin/../lib/gcc -Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../.. --whole-archive CMakeFiles\cmTC_14f97.dir/objects.a --no-whole-archive --out-implib libcmTC_14f97.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -lmingw32 -lgcc -lmoldname -lmingwex -lmsvcrt c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o]
-    arg [ld] ==> ignore
-    arg [-Bdynamic] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTC_14f97.exe] ==> ignore
-    arg [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../../crt2.o] ==> ignore
-    arg [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtbegin.o] ==> ignore
-    arg [-Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1] ==> dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1]
-    arg [-Lc:/progra~2/falcon/mingw/bin/../lib/gcc] ==> dir [c:/progra~2/falcon/mingw/bin/../lib/gcc]
-    arg [-Lc:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../..] ==> dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../..]
-    arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_14f97.dir/objects.a] ==> ignore
-    arg [--no-whole-archive] ==> ignore
-    arg [--out-implib] ==> ignore
-    arg [libcmTC_14f97.dll.a] ==> ignore
-    arg [--major-image-version] ==> ignore
-    arg [0] ==> ignore
-    arg [--minor-image-version] ==> ignore
-    arg [0] ==> ignore
-    arg [-lmingw32] ==> lib [mingw32]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lmoldname] ==> lib [moldname]
-    arg [-lmingwex] ==> lib [mingwex]
-    arg [-lmsvcrt] ==> lib [msvcrt]
-    arg [-luser32] ==> lib [user32]
-    arg [-lkernel32] ==> lib [kernel32]
-    arg [-ladvapi32] ==> lib [advapi32]
-    arg [-lshell32] ==> lib [shell32]
-    arg [-lmingw32] ==> lib [mingw32]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lmoldname] ==> lib [moldname]
-    arg [-lmingwex] ==> lib [mingwex]
-    arg [-lmsvcrt] ==> lib [msvcrt]
-    arg [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/crtend.o] ==> ignore
-  remove lib [msvcrt]
-  remove lib [msvcrt]
-  collapse library dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1]
-  collapse library dir [c:/progra~2/falcon/mingw/bin/../lib/gcc] ==> [C:/Program Files (x86)/Falcon/MinGW/lib/gcc]
-  collapse library dir [c:/progra~2/falcon/mingw/bin/../lib/gcc/mingw32/4.4.1/../../..] ==> [C:/Program Files (x86)/Falcon/MinGW/lib]
-  implicit libs: [mingw32;gcc;moldname;mingwex;user32;kernel32;advapi32;shell32;mingw32;gcc;moldname;mingwex]
-  implicit dirs: [C:/Program Files (x86)/Falcon/MinGW/lib/gcc/mingw32/4.4.1;C:/Program Files (x86)/Falcon/MinGW/lib/gcc;C:/Program Files (x86)/Falcon/MinGW/lib]
-  implicit fwks: []
+Run Build Command:"nmake" "/nologo" "cmTC_4ae51\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_4ae51.dir\build.make /nologo -L                  CMakeFiles\cmTC_4ae51.dir\build
+Building C object CMakeFiles/cmTC_4ae51.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\Usuario\AppData\Local\Temp\nm7930.tmp
+CMakeCCompilerABI.c
+Linking C executable cmTC_4ae51.exe
+	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_4ae51.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_4ae51.dir\objects1.rsp @C:\Users\Usuario\AppData\Local\Temp\nm79BE.tmp
 
 
 
 
-Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
+Detecting C [] compiler features compiled with the following output:
+Change Dir: C:/Users/Usuario/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe" "cmTC_65541/fast"
-C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_65541.dir\build.make CMakeFiles/cmTC_65541.dir/build
-mingw32-make.exe[1]: Entering directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_65541.dir/feature_tests.c.obj
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe   -std=c99 -o CMakeFiles\cmTC_65541.dir\feature_tests.c.obj   -c C:\Users\ev.jaimes\Infratec\Infratec\cmake-build-debug\CMakeFiles\feature_tests.c
-Linking C executable cmTC_65541.exe
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_65541.dir\link.txt --verbose=1
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_65541.dir/objects.a
-C:\PROGRA~2\Falcon\MinGW\bin\ar.exe cr CMakeFiles\cmTC_65541.dir/objects.a @CMakeFiles\cmTC_65541.dir\objects1.rsp
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_65541.dir/objects.a -Wl,--no-whole-archive  -o cmTC_65541.exe -Wl,--out-implib,libcmTC_65541.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_65541.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"nmake" "/nologo" "cmTC_03c77\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_03c77.dir\build.make /nologo -L                  CMakeFiles\cmTC_03c77.dir\build
+Building C object CMakeFiles/cmTC_03c77.dir/feature_tests.c.obj
+	C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @C:\Users\Usuario\AppData\Local\Temp\nm7FA8.tmp
+feature_tests.c
+Linking C executable cmTC_03c77.exe
+	"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_03c77.dir --manifests  -- C:\PROGRA~2\MICROS~4\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_03c77.dir\objects1.rsp @C:\Users\Usuario\AppData\Local\Temp\nm8007.tmp
 
 
     Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_restrict
-    Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:1c_variadic_macros
-
-
-Detecting C [-std=c89] compiler features compiled with the following output:
-Change Dir: C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe" "cmTC_54b2a/fast"
-C:/PROGRA~2/Falcon/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_54b2a.dir\build.make CMakeFiles/cmTC_54b2a.dir/build
-mingw32-make.exe[1]: Entering directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_54b2a.dir/feature_tests.c.obj
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe   -std=c89 -o CMakeFiles\cmTC_54b2a.dir\feature_tests.c.obj   -c C:\Users\ev.jaimes\Infratec\Infratec\cmake-build-debug\CMakeFiles\feature_tests.c
-Linking C executable cmTC_54b2a.exe
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_54b2a.dir\link.txt --verbose=1
-"C:\Users\ev.jaimes\AppData\Local\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_54b2a.dir/objects.a
-C:\PROGRA~2\Falcon\MinGW\bin\ar.exe cr CMakeFiles\cmTC_54b2a.dir/objects.a @CMakeFiles\cmTC_54b2a.dir\objects1.rsp
-C:\PROGRA~2\Falcon\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_54b2a.dir/objects.a -Wl,--no-whole-archive  -o cmTC_54b2a.exe -Wl,--out-implib,libcmTC_54b2a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_54b2a.dir\linklibs.rsp
-mingw32-make.exe[1]: Leaving directory `C:/Users/ev.jaimes/Infratec/Infratec/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:0c_restrict
-    Feature record: C_FEATURE:0c_static_assert
-    Feature record: C_FEATURE:0c_variadic_macros
